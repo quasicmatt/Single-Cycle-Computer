@@ -1,0 +1,1 @@
+C:\Users\matthew\Desktop\Group-5\Proj2(SCC)\makeTestSpace\Emulator\target\debug\Class-ISA-Emulator.exe: C:\Users\matthew\Desktop\Group-5\Proj2(SCC)\makeTestSpace\Emulator\src\emulator.rs C:\Users\matthew\Desktop\Group-5\Proj2(SCC)\makeTestSpace\Emulator\src\main.rs C:\Users\matthew\Desktop\Group-5\Proj2(SCC)\makeTestSpace\Emulator\src\ui.rs

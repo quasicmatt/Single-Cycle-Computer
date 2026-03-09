@@ -1,0 +1,234 @@
+[*]
+[*] GTKWave Analyzer v3.3.48 (w)1999-2013 BSI
+[*] Mon Oct 20 13:59:40 2025
+[*]
+[dumpfile] "C:\Users\matthew\Desktop\Group-5\Proj2(SCC)\EXEComplete\dump.vcd"
+[dumpfile_mtime] "Mon Oct 20 08:35:08 2025"
+[dumpfile_size] 91058
+[savefile] "C:\Users\matthew\Desktop\Group-5\Proj2(SCC)\EXEComplete\gtkwaveSave"
+[timestart] 0
+[size] 1920 1009
+[pos] -243 -243
+*-3.000000 6 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] scc_tb.
+[treeopen] scc_tb.dut.
+[treeopen] scc_tb.dut.scc.
+[treeopen] scc_tb.dut.scc.Execute.
+[treeopen] scc_tb.dut.scc.instruction_fetch.
+[sst_width] 197
+[signals_width] 423
+[sst_expanded] 1
+[sst_vpaned_height] 297
+@28
+[color] 3
+scc_tb.dut.scc.registers.clk
+@200
+-
+-normal program counter 
+@22
+scc_tb.dut.scc.instruction_fetch.programCounter[31:0]
+@200
+-current instruction executing
+@22
+scc_tb.dut.scc.instruction_fetch.instruction[31:0]
+@200
+-normal instruction
+@22
+scc_tb.dut.scc.instruction_fetch.instruction_mem[31:0]
+@200
+-ROM program count
+@22
+scc_tb.dut.scc.instruction_fetch.what.rom_programCounter[15:0]
+@200
+-ROM instruction
+@22
+scc_tb.dut.scc.instruction_fetch.what.instruction[31:0]
+@200
+-
+-
+-all normal regs
+@22
+[color] 5
+scc_tb.dut.scc.registers.dbg_reg0[31:0]
+@200
+-
+@22
+[color] 5
+scc_tb.dut.scc.registers.dbg_reg1[31:0]
+@200
+-
+@22
+[color] 5
+scc_tb.dut.scc.registers.dbg_reg2[31:0]
+@200
+-
+@22
+[color] 5
+scc_tb.dut.scc.registers.dbg_reg3[31:0]
+@200
+-
+@22
+[color] 5
+scc_tb.dut.scc.registers.dbg_reg4[31:0]
+@200
+-
+@22
+[color] 5
+scc_tb.dut.scc.registers.dbg_reg5[31:0]
+@200
+-
+@22
+[color] 5
+scc_tb.dut.scc.registers.dbg_reg6[31:0]
+@200
+-
+@22
+[color] 5
+scc_tb.dut.scc.registers.dbg_reg7[31:0]
+@200
+-
+@22
+[color] 5
+scc_tb.dut.scc.registers.dbg_reg8[31:0]
+@200
+-
+@22
+[color] 5
+scc_tb.dut.scc.registers.dbg_reg9[31:0]
+@200
+-
+@22
+[color] 5
+scc_tb.dut.scc.registers.dbg_reg10[31:0]
+@200
+-
+@22
+[color] 5
+scc_tb.dut.scc.registers.dbg_reg11[31:0]
+@200
+-
+@22
+[color] 5
+scc_tb.dut.scc.registers.dbg_reg12[31:0]
+@200
+-
+@22
+[color] 5
+scc_tb.dut.scc.registers.dbg_reg13[31:0]
+@200
+-
+@22
+[color] 5
+scc_tb.dut.scc.registers.dbg_reg14[31:0]
+@200
+-
+@22
+[color] 5
+scc_tb.dut.scc.instruction_fetch.programCounter[31:0]
+@200
+-
+-ROM reg
+@c00022
+[color] 7
+scc_tb.dut.scc.instruction_fetch.what.dbg_reg0[31:0]
+@28
+(0)scc_tb.dut.scc.instruction_fetch.what.dbg_reg0[31:0]
+(1)scc_tb.dut.scc.instruction_fetch.what.dbg_reg0[31:0]
+(2)scc_tb.dut.scc.instruction_fetch.what.dbg_reg0[31:0]
+(3)scc_tb.dut.scc.instruction_fetch.what.dbg_reg0[31:0]
+(4)scc_tb.dut.scc.instruction_fetch.what.dbg_reg0[31:0]
+(5)scc_tb.dut.scc.instruction_fetch.what.dbg_reg0[31:0]
+(6)scc_tb.dut.scc.instruction_fetch.what.dbg_reg0[31:0]
+(7)scc_tb.dut.scc.instruction_fetch.what.dbg_reg0[31:0]
+(8)scc_tb.dut.scc.instruction_fetch.what.dbg_reg0[31:0]
+(9)scc_tb.dut.scc.instruction_fetch.what.dbg_reg0[31:0]
+(10)scc_tb.dut.scc.instruction_fetch.what.dbg_reg0[31:0]
+(11)scc_tb.dut.scc.instruction_fetch.what.dbg_reg0[31:0]
+(12)scc_tb.dut.scc.instruction_fetch.what.dbg_reg0[31:0]
+(13)scc_tb.dut.scc.instruction_fetch.what.dbg_reg0[31:0]
+(14)scc_tb.dut.scc.instruction_fetch.what.dbg_reg0[31:0]
+(15)scc_tb.dut.scc.instruction_fetch.what.dbg_reg0[31:0]
+(16)scc_tb.dut.scc.instruction_fetch.what.dbg_reg0[31:0]
+(17)scc_tb.dut.scc.instruction_fetch.what.dbg_reg0[31:0]
+(18)scc_tb.dut.scc.instruction_fetch.what.dbg_reg0[31:0]
+(19)scc_tb.dut.scc.instruction_fetch.what.dbg_reg0[31:0]
+(20)scc_tb.dut.scc.instruction_fetch.what.dbg_reg0[31:0]
+(21)scc_tb.dut.scc.instruction_fetch.what.dbg_reg0[31:0]
+(22)scc_tb.dut.scc.instruction_fetch.what.dbg_reg0[31:0]
+(23)scc_tb.dut.scc.instruction_fetch.what.dbg_reg0[31:0]
+(24)scc_tb.dut.scc.instruction_fetch.what.dbg_reg0[31:0]
+(25)scc_tb.dut.scc.instruction_fetch.what.dbg_reg0[31:0]
+(26)scc_tb.dut.scc.instruction_fetch.what.dbg_reg0[31:0]
+(27)scc_tb.dut.scc.instruction_fetch.what.dbg_reg0[31:0]
+(28)scc_tb.dut.scc.instruction_fetch.what.dbg_reg0[31:0]
+(29)scc_tb.dut.scc.instruction_fetch.what.dbg_reg0[31:0]
+(30)scc_tb.dut.scc.instruction_fetch.what.dbg_reg0[31:0]
+(31)scc_tb.dut.scc.instruction_fetch.what.dbg_reg0[31:0]
+@1401200
+-group_end
+@200
+-
+@22
+[color] 7
+scc_tb.dut.scc.instruction_fetch.what.dbg_reg1[31:0]
+@200
+-
+@22
+[color] 7
+scc_tb.dut.scc.instruction_fetch.what.dbg_reg2[31:0]
+@200
+-
+@22
+[color] 7
+scc_tb.dut.scc.instruction_fetch.what.dbg_reg3[31:0]
+@200
+-
+@22
+[color] 7
+scc_tb.dut.scc.instruction_fetch.what.dbg_reg4[31:0]
+@200
+-
+@22
+[color] 7
+scc_tb.dut.scc.instruction_fetch.what.dbg_reg5[31:0]
+@200
+-
+@22
+[color] 7
+scc_tb.dut.scc.instruction_fetch.what.dbg_reg6[31:0]
+@200
+-
+@22
+[color] 7
+scc_tb.dut.scc.instruction_fetch.what.dbg_reg7[31:0]
+@200
+-
+-
+-EXE vars
+@c00023
+[color] 2
+scc_tb.dut.scc.Execute.flags[3:0]
+@28
+(0)scc_tb.dut.scc.Execute.flags[3:0]
+(1)scc_tb.dut.scc.Execute.flags[3:0]
+(2)scc_tb.dut.scc.Execute.flags[3:0]
+(3)scc_tb.dut.scc.Execute.flags[3:0]
+@1401201
+-group_end
+@200
+-
+@23
+[color] 2
+scc_tb.dut.scc.Execute.operand1[31:0]
+@200
+-
+@23
+[color] 2
+scc_tb.dut.scc.Execute.operand2[31:0]
+@200
+-
+@23
+[color] 2
+scc_tb.dut.scc.Execute.result[31:0]
+[pattern_trace] 1
+[pattern_trace] 0

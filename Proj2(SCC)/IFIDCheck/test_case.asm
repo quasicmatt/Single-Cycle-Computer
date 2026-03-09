@@ -1,0 +1,8 @@
+start:	
+	LOAD	R3, R2
+	STOR	R5, R7
+	ADD		R8, R1, R4
+	SUBS	R9, R11, #0xFFFF
+	B		#0x0CCC
+	B.EQ	#0x0DDD
+	HALT

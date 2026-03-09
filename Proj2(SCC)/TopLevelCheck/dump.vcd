@@ -1,0 +1,119 @@
+$date
+	Thu Sep 18 14:28:46 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module scc_tb $end
+$var wire 32 ! data_memory_in_v_tb [31:0] $end
+$var wire 2 " err_bits_tb [1:0] $end
+$var wire 1 # halt_f_tb $end
+$var wire 32 $ instruction_memory_v_tb [31:0] $end
+$var reg 1 % clk_en_tb $end
+$var reg 1 & clk_tb $end
+$var reg 1 ' rst_tb $end
+$scope module scc_top $end
+$var wire 1 ( clk $end
+$var wire 1 ) clk_en $end
+$var wire 32 * data_memory_a [31:0] $end
+$var wire 32 + data_memory_in_v [31:0] $end
+$var wire 32 , data_memory_out_v [31:0] $end
+$var wire 1 - data_memory_read $end
+$var wire 1 . data_memory_write $end
+$var wire 2 / err_bits [1:0] $end
+$var wire 1 # halt_f $end
+$var wire 32 0 instruction_memory_a [31:0] $end
+$var wire 1 1 instruction_memory_en $end
+$var wire 32 2 instruction_memory_v [31:0] $end
+$var wire 1 3 rst $end
+$scope module scc $end
+$var wire 1 ( clk $end
+$var wire 32 4 data_memory_a [31:0] $end
+$var wire 32 5 data_memory_in_v [31:0] $end
+$var wire 1 - data_memory_read $end
+$var wire 1 . data_memory_write $end
+$var wire 1 # halt_f $end
+$var wire 32 6 instruction_memory_v [31:0] $end
+$var wire 1 3 rst $end
+$upscope $end
+$scope module mem_module $end
+$var wire 32 7 data_memory_a [31:0] $end
+$var wire 32 8 data_memory_out_v [31:0] $end
+$var wire 1 - data_memory_read $end
+$var wire 1 . data_memory_write $end
+$var wire 32 9 instruction_memory_a [31:0] $end
+$var wire 1 1 instruction_memory_en $end
+$var wire 1 ( mem_Clk $end
+$var reg 32 : data_memory_in_v [31:0] $end
+$var reg 32 ; instruction_memory_v [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx ;
+bx :
+bz 9
+bz 8
+bz 7
+bx 6
+bx 5
+bz 4
+03
+bx 2
+z1
+bz 0
+bz /
+z.
+z-
+bz ,
+bx +
+bz *
+x)
+0(
+0'
+0&
+x%
+bx $
+z#
+bz "
+bx !
+$end
+#10
+1'
+13
+1&
+1(
+#20
+0&
+0(
+#30
+1&
+1(
+#40
+0&
+0(
+#50
+1&
+1(
+#60
+0&
+0(
+#70
+0'
+03
+1&
+1(
+#80
+0&
+0(
+#90
+1&
+1(
+#100
+0&
+0(

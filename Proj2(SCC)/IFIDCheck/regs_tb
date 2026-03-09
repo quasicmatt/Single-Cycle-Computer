@@ -1,0 +1,239 @@
+#! /c/iverilog/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision - 9;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0128E800 .scope module, "regs_tb" "regs_tb" 2 3;
+ .timescale -9 -9;
+v012897D0_0 .var "clk_tb", 0 0;
+v01289828_0 .net "halt_f_tb", 0 0, C4<z>; 0 drivers
+v01289880_0 .net "read_data_1_tb", 31 0, v0128EEF8_0; 1 drivers
+v012898D8_0 .net "read_data_2_tb", 31 0, v0128EF50_0; 1 drivers
+v0128BBF0_0 .var "read_reg_1_tb", 3 0;
+v0128BC48_0 .var "read_reg_2_tb", 3 0;
+v01171320_0 .var "rst_tb", 0 0;
+v01171110_0 .var "write_data_tb", 31 0;
+v01170CF0_0 .var "write_reg_tb", 3 0;
+v01171168_0 .var "write_to_reg_Flag_tb", 0 0;
+S_0128E118 .scope module, "regs_test" "regs" 2 28, 3 1, S_0128E800;
+ .timescale -9 -9;
+v01289AE0_0 .net "clk", 0 0, v012897D0_0; 1 drivers
+v01289B38_0 .alias "halt_f", 0 0, v01289828_0;
+v0128EEF8_0 .var "read_data_1", 31 0;
+v0128EF50_0 .var "read_data_2", 31 0;
+v01172EF0_0 .net "read_reg_1", 3 0, v0128BBF0_0; 1 drivers
+v01172F48_0 .net "read_reg_2", 3 0, v0128BC48_0; 1 drivers
+v01172FA0 .array "regs", 15 0, 31 0;
+v01282C60_0 .net "rst", 0 0, v01171320_0; 1 drivers
+v01282CB8_0 .net "write_data", 31 0, v01171110_0; 1 drivers
+v01282D10_0 .net "write_reg", 3 0, v01170CF0_0; 1 drivers
+v01282D68_0 .net "write_to_reg_Flag", 0 0, v01171168_0; 1 drivers
+E_0128B350 .event posedge, v01289AE0_0;
+    .scope S_0128E118;
+T_0 ;
+    %wait E_0128B350;
+    %load/v 8, v01282C60_0, 1;
+    %mov 9, 0, 1;
+    %cmpi/u 8, 0, 2;
+    %jmp/0xz  T_0.0, 4;
+    %load/v 8, v01282D68_0, 1;
+    %mov 9, 0, 2;
+    %cmpi/u 8, 1, 3;
+    %jmp/0xz  T_0.2, 4;
+    %load/v 8, v01282CB8_0, 32;
+    %ix/getv 3, v01282D10_0;
+    %jmp/1 t_0, 4;
+    %ix/load 0, 32, 0; word width
+    %ix/load 1, 0, 0; part off
+    %assign/av v01172FA0, 0, 8;
+t_0 ;
+    %jmp T_0.3;
+T_0.2 ;
+    %ix/getv 3, v01282CB8_0;
+    %load/av 8, v01172FA0, 32;
+    %ix/getv 3, v01282CB8_0;
+    %jmp/1 t_1, 4;
+    %ix/load 0, 32, 0; word width
+    %ix/load 1, 0, 0; part off
+    %assign/av v01172FA0, 0, 8;
+t_1 ;
+T_0.3 ;
+    %jmp T_0.1;
+T_0.0 ;
+    %ix/load 3, 15, 0; address
+    %ix/load 0, 32, 0; word width
+    %ix/load 1, 0, 0; part off
+    %assign/av v01172FA0, 0, 0;
+t_2 ;
+    %ix/load 3, 14, 0; address
+    %ix/load 0, 32, 0; word width
+    %ix/load 1, 0, 0; part off
+    %assign/av v01172FA0, 0, 0;
+t_3 ;
+    %ix/load 3, 13, 0; address
+    %ix/load 0, 32, 0; word width
+    %ix/load 1, 0, 0; part off
+    %assign/av v01172FA0, 0, 0;
+t_4 ;
+    %ix/load 3, 12, 0; address
+    %ix/load 0, 32, 0; word width
+    %ix/load 1, 0, 0; part off
+    %assign/av v01172FA0, 0, 0;
+t_5 ;
+    %ix/load 3, 11, 0; address
+    %ix/load 0, 32, 0; word width
+    %ix/load 1, 0, 0; part off
+    %assign/av v01172FA0, 0, 0;
+t_6 ;
+    %ix/load 3, 10, 0; address
+    %ix/load 0, 32, 0; word width
+    %ix/load 1, 0, 0; part off
+    %assign/av v01172FA0, 0, 0;
+t_7 ;
+    %ix/load 3, 9, 0; address
+    %ix/load 0, 32, 0; word width
+    %ix/load 1, 0, 0; part off
+    %assign/av v01172FA0, 0, 0;
+t_8 ;
+    %ix/load 3, 8, 0; address
+    %ix/load 0, 32, 0; word width
+    %ix/load 1, 0, 0; part off
+    %assign/av v01172FA0, 0, 0;
+t_9 ;
+    %ix/load 3, 7, 0; address
+    %ix/load 0, 32, 0; word width
+    %ix/load 1, 0, 0; part off
+    %assign/av v01172FA0, 0, 0;
+t_10 ;
+    %ix/load 3, 6, 0; address
+    %ix/load 0, 32, 0; word width
+    %ix/load 1, 0, 0; part off
+    %assign/av v01172FA0, 0, 0;
+t_11 ;
+    %ix/load 3, 5, 0; address
+    %ix/load 0, 32, 0; word width
+    %ix/load 1, 0, 0; part off
+    %assign/av v01172FA0, 0, 0;
+t_12 ;
+    %ix/load 3, 4, 0; address
+    %ix/load 0, 32, 0; word width
+    %ix/load 1, 0, 0; part off
+    %assign/av v01172FA0, 0, 0;
+t_13 ;
+    %ix/load 3, 3, 0; address
+    %ix/load 0, 32, 0; word width
+    %ix/load 1, 0, 0; part off
+    %assign/av v01172FA0, 0, 0;
+t_14 ;
+    %ix/load 3, 2, 0; address
+    %ix/load 0, 32, 0; word width
+    %ix/load 1, 0, 0; part off
+    %assign/av v01172FA0, 0, 0;
+t_15 ;
+    %ix/load 3, 1, 0; address
+    %ix/load 0, 32, 0; word width
+    %ix/load 1, 0, 0; part off
+    %assign/av v01172FA0, 0, 0;
+t_16 ;
+    %ix/load 3, 0, 0; address
+    %ix/load 0, 32, 0; word width
+    %ix/load 1, 0, 0; part off
+    %assign/av v01172FA0, 0, 0;
+t_17 ;
+T_0.1 ;
+    %ix/getv 3, v01172EF0_0;
+    %load/av 8, v01172FA0, 32;
+    %ix/load 0, 32, 0;
+    %assign/v0 v0128EEF8_0, 0, 8;
+    %ix/getv 3, v01172F48_0;
+    %load/av 8, v01172FA0, 32;
+    %ix/load 0, 32, 0;
+    %assign/v0 v0128EF50_0, 0, 8;
+    %jmp T_0;
+    .thread T_0;
+    .scope S_0128E800;
+T_1 ;
+    %ix/load 0, 1, 0;
+    %assign/v0 v012897D0_0, 0, 0;
+    %ix/load 0, 1, 0;
+    %assign/v0 v01171320_0, 0, 0;
+    %ix/load 0, 1, 0;
+    %assign/v0 v01171168_0, 0, 0;
+    %ix/load 0, 4, 0;
+    %assign/v0 v01170CF0_0, 0, 0;
+    %ix/load 0, 4, 0;
+    %assign/v0 v0128BBF0_0, 0, 0;
+    %ix/load 0, 4, 0;
+    %assign/v0 v0128BC48_0, 0, 0;
+    %ix/load 0, 32, 0;
+    %assign/v0 v01171110_0, 0, 0;
+    %vpi_call 2 18 "$dumpfile", "dumpRegs.vcd";
+    %vpi_call 2 19 "$dumpvars", 1'sb0, S_0128E800;
+    %end;
+    .thread T_1;
+    .scope S_0128E800;
+T_2 ;
+    %wait E_0128B350;
+    %load/v 8, v01289828_0, 1;
+    %jmp/0xz  T_2.0, 8;
+    %vpi_call 2 24 "$finish";
+T_2.0 ;
+    %jmp T_2;
+    .thread T_2;
+    .scope S_0128E800;
+T_3 ;
+    %delay 10, 0;
+    %load/v 8, v012897D0_0, 1;
+    %inv 8, 1;
+    %set/v v012897D0_0, 8, 1;
+    %jmp T_3;
+    .thread T_3;
+    .scope S_0128E800;
+T_4 ;
+    %delay 10, 0;
+    %ix/load 0, 1, 0;
+    %assign/v0 v01171320_0, 0, 1;
+    %delay 58, 0;
+    %ix/load 0, 1, 0;
+    %assign/v0 v01171320_0, 0, 0;
+    %movi 8, 4294901760, 32;
+    %ix/load 0, 32, 0;
+    %assign/v0 v01171110_0, 0, 8;
+    %movi 8, 5, 4;
+    %ix/load 0, 4, 0;
+    %assign/v0 v01170CF0_0, 0, 8;
+    %movi 8, 5, 4;
+    %ix/load 0, 4, 0;
+    %assign/v0 v0128BBF0_0, 0, 8;
+    %movi 8, 5, 4;
+    %ix/load 0, 4, 0;
+    %assign/v0 v0128BC48_0, 0, 8;
+    %ix/load 0, 1, 0;
+    %assign/v0 v01171168_0, 0, 1;
+    %delay 20, 0;
+    %movi 8, 3435921408, 32;
+    %ix/load 0, 32, 0;
+    %assign/v0 v01171110_0, 0, 8;
+    %movi 8, 3, 4;
+    %ix/load 0, 4, 0;
+    %assign/v0 v01170CF0_0, 0, 8;
+    %movi 8, 3, 4;
+    %ix/load 0, 4, 0;
+    %assign/v0 v0128BC48_0, 0, 8;
+    %delay 20, 0;
+    %ix/load 0, 1, 0;
+    %assign/v0 v01171168_0, 0, 0;
+    %movi 8, 5, 4;
+    %ix/load 0, 4, 0;
+    %assign/v0 v01170CF0_0, 0, 8;
+    %delay 160, 0;
+    %vpi_call 2 63 "$finish";
+    %end;
+    .thread T_4;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "regs_tb.v";
+    "regs.v";

@@ -1,0 +1,241 @@
+#! /c/iverilog/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision - 9;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_001F8F68 .scope module, "scc_tb" "scc_tb" 2 3;
+ .timescale -9 -9;
+v01141138_0 .var "clk_en_tb", 0 0;
+v011410E0_0 .var "clk_tb", 0 0;
+v011413A0_0 .net "data_memory_in_v_tb", 31 0, v001FBE20_0; 1 drivers
+v01141190_0 .net "err_bits_tb", 1 0, C4<zz>; 0 drivers
+v011411E8_0 .net "halt_f_tb", 0 0, C4<z>; 0 drivers
+v01140D70_0 .net "instruction_memory_v_tb", 31 0, v001FD340_0; 1 drivers
+v011413F8_0 .var "rst_tb", 0 0;
+E_001FA000 .event posedge, v01143670_0;
+S_011339A0 .scope module, "scc_top" "scc_f25_top" 2 27, 3 1, S_001F8F68;
+ .timescale 0 0;
+v01140F28_0 .net "clk", 0 0, v011410E0_0; 1 drivers
+v01140E20_0 .net "clk_en", 0 0, v01141138_0; 1 drivers
+v01141030_0 .net "data_memory_a", 31 0, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>; 0 drivers
+v01141298_0 .alias "data_memory_in_v", 31 0, v011413A0_0;
+v01140DC8_0 .net "data_memory_out_v", 31 0, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>; 0 drivers
+v01141348_0 .net "data_memory_read", 0 0, C4<z>; 0 drivers
+v01140E78_0 .net "data_memory_write", 0 0, C4<z>; 0 drivers
+v01141240_0 .alias "err_bits", 1 0, v01141190_0;
+v01140D18_0 .alias "halt_f", 0 0, v011411E8_0;
+v01140ED0_0 .net "instruction_memory_a", 31 0, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>; 0 drivers
+v01140F80_0 .net "instruction_memory_en", 0 0, C4<z>; 0 drivers
+v01140FD8_0 .alias "instruction_memory_v", 31 0, v01140D70_0;
+v01141088_0 .net "rst", 0 0, v011413F8_0; 1 drivers
+S_01133AB0 .scope module, "scc" "scc" 3 11, 4 1, S_011339A0;
+ .timescale 0 0;
+v01143720_0 .alias "clk", 0 0, v01140F28_0;
+v001F0E68_0 .alias "data_memory_a", 31 0, v01141030_0;
+v001F0EC0_0 .alias "data_memory_in_v", 31 0, v011413A0_0;
+v001F0F18_0 .alias "data_memory_read", 0 0, v01141348_0;
+v01140C40_0 .alias "data_memory_write", 0 0, v01140E78_0;
+v01140C98_0 .alias "halt_f", 0 0, v011411E8_0;
+v011412F0_0 .alias "instruction_memory_v", 31 0, v01140D70_0;
+v01141450_0 .alias "rst", 0 0, v01141088_0;
+S_01133B38 .scope module, "mem_module" "instruction_and_data" 3 22, 5 1, S_011339A0;
+ .timescale 0 0;
+v001FB868_0 .alias "data_memory_a", 31 0, v01141030_0;
+v001FBE20_0 .var "data_memory_in_v", 31 0;
+v001FE468_0 .alias "data_memory_out_v", 31 0, v01140DC8_0;
+v001FE4C0_0 .alias "data_memory_read", 0 0, v01141348_0;
+v001FE518_0 .alias "data_memory_write", 0 0, v01140E78_0;
+v001FD290_0 .alias "instruction_memory_a", 31 0, v01140ED0_0;
+v001FD2E8_0 .alias "instruction_memory_en", 0 0, v01140F80_0;
+v001FD340_0 .var "instruction_memory_v", 31 0;
+v01143670_0 .alias "mem_Clk", 0 0, v01140F28_0;
+v011436C8 .array "memory", 65535 0, 7 0;
+E_001FA120 .event edge, v01143670_0;
+    .scope S_01133B38;
+T_0 ;
+    %vpi_call 5 15 "$readmemh", "output.mem", v011436C8;
+    %end;
+    .thread T_0;
+    .scope S_01133B38;
+T_1 ;
+    %wait E_001FA120;
+    %load/v 8, v001FD2E8_0, 1;
+    %jmp/0xz  T_1.0, 8;
+    %ix/getv 3, v001FD290_0;
+    %load/av 8, v011436C8, 8;
+    %ix/load 0, 8, 0;
+    %ix/load 1, 24, 0;
+    %assign/v0/x1 v001FD340_0, 0, 8;
+    %ix/load 0, 1, 0;
+    %load/vp0 16, v001FD290_0, 32;
+    %ix/get 3, 16, 32;
+    %load/av 8, v011436C8, 8;
+    %ix/load 0, 8, 0;
+    %ix/load 1, 16, 0;
+    %assign/v0/x1 v001FD340_0, 0, 8;
+    %ix/load 0, 2, 0;
+    %load/vp0 16, v001FD290_0, 32;
+    %ix/get 3, 16, 32;
+    %load/av 8, v011436C8, 8;
+    %ix/load 0, 8, 0;
+    %ix/load 1, 8, 0;
+    %assign/v0/x1 v001FD340_0, 0, 8;
+    %ix/load 0, 3, 0;
+    %load/vp0 16, v001FD290_0, 32;
+    %ix/get 3, 16, 32;
+    %load/av 8, v011436C8, 8;
+    %ix/load 0, 8, 0;
+    %ix/load 1, 0, 0;
+    %assign/v0/x1 v001FD340_0, 0, 8;
+    %jmp T_1.1;
+T_1.0 ;
+    %load/v 8, v001FD2E8_0, 1;
+    %inv 8, 1;
+    %jmp/0xz  T_1.2, 8;
+    %ix/load 0, 32, 0;
+    %assign/v0 v001FD340_0, 0, 1;
+T_1.2 ;
+T_1.1 ;
+    %load/v 8, v001FE4C0_0, 1;
+    %jmp/0xz  T_1.4, 8;
+    %ix/getv 3, v001FB868_0;
+    %load/av 8, v011436C8, 8;
+    %ix/load 0, 8, 0;
+    %ix/load 1, 24, 0;
+    %assign/v0/x1 v001FBE20_0, 0, 8;
+    %ix/load 0, 1, 0;
+    %load/vp0 16, v001FB868_0, 32;
+    %ix/get 3, 16, 32;
+    %load/av 8, v011436C8, 8;
+    %ix/load 0, 8, 0;
+    %ix/load 1, 16, 0;
+    %assign/v0/x1 v001FBE20_0, 0, 8;
+    %ix/load 0, 2, 0;
+    %load/vp0 16, v001FB868_0, 32;
+    %ix/get 3, 16, 32;
+    %load/av 8, v011436C8, 8;
+    %ix/load 0, 8, 0;
+    %ix/load 1, 8, 0;
+    %assign/v0/x1 v001FBE20_0, 0, 8;
+    %ix/load 0, 3, 0;
+    %load/vp0 16, v001FB868_0, 32;
+    %ix/get 3, 16, 32;
+    %load/av 8, v011436C8, 8;
+    %ix/load 0, 8, 0;
+    %ix/load 1, 0, 0;
+    %assign/v0/x1 v001FBE20_0, 0, 8;
+T_1.4 ;
+    %load/v 8, v001FE518_0, 1;
+    %jmp/0xz  T_1.6, 8;
+    %ix/load 1, 24, 0;
+    %mov 4, 0, 1;
+    %jmp/1 T_1.8, 4;
+    %load/x1p 8, v001FE468_0, 8;
+    %jmp T_1.9;
+T_1.8 ;
+    %mov 8, 2, 8;
+T_1.9 ;
+; Save base=8 wid=8 in lookaside.
+    %ix/getv 3, v001FB868_0;
+    %jmp/1 t_0, 4;
+    %ix/load 0, 8, 0; word width
+    %ix/load 1, 0, 0; part off
+    %assign/av v011436C8, 0, 8;
+t_0 ;
+    %ix/load 1, 16, 0;
+    %mov 4, 0, 1;
+    %jmp/1 T_1.10, 4;
+    %load/x1p 8, v001FE468_0, 8;
+    %jmp T_1.11;
+T_1.10 ;
+    %mov 8, 2, 8;
+T_1.11 ;
+; Save base=8 wid=8 in lookaside.
+    %ix/load 0, 1, 0;
+    %load/vp0 16, v001FB868_0, 32;
+    %ix/get 3, 16, 32;
+    %jmp/1 t_1, 4;
+    %ix/load 0, 8, 0; word width
+    %ix/load 1, 0, 0; part off
+    %assign/av v011436C8, 0, 8;
+t_1 ;
+    %ix/load 1, 8, 0;
+    %mov 4, 0, 1;
+    %jmp/1 T_1.12, 4;
+    %load/x1p 8, v001FE468_0, 8;
+    %jmp T_1.13;
+T_1.12 ;
+    %mov 8, 2, 8;
+T_1.13 ;
+; Save base=8 wid=8 in lookaside.
+    %ix/load 0, 2, 0;
+    %load/vp0 16, v001FB868_0, 32;
+    %ix/get 3, 16, 32;
+    %jmp/1 t_2, 4;
+    %ix/load 0, 8, 0; word width
+    %ix/load 1, 0, 0; part off
+    %assign/av v011436C8, 0, 8;
+t_2 ;
+    %load/v 8, v001FE468_0, 8; Only need 8 of 32 bits
+; Save base=8 wid=8 in lookaside.
+    %ix/load 0, 3, 0;
+    %load/vp0 16, v001FB868_0, 32;
+    %ix/get 3, 16, 32;
+    %jmp/1 t_3, 4;
+    %ix/load 0, 8, 0; word width
+    %ix/load 1, 0, 0; part off
+    %assign/av v011436C8, 0, 8;
+t_3 ;
+    %ix/load 0, 32, 0;
+    %assign/v0 v001FBE20_0, 0, 2;
+T_1.6 ;
+    %jmp T_1;
+    .thread T_1, $push;
+    .scope S_001F8F68;
+T_2 ;
+    %ix/load 0, 1, 0;
+    %assign/v0 v011410E0_0, 0, 0;
+    %ix/load 0, 1, 0;
+    %assign/v0 v011413F8_0, 0, 0;
+    %vpi_call 2 13 "$dumpfile", "dump.vcd";
+    %vpi_call 2 14 "$dumpvars", 1'sb0, S_001F8F68;
+    %end;
+    .thread T_2;
+    .scope S_001F8F68;
+T_3 ;
+    %wait E_001FA000;
+    %load/v 8, v011411E8_0, 1;
+    %jmp/0xz  T_3.0, 8;
+    %vpi_call 2 19 "$finish";
+T_3.0 ;
+    %jmp T_3;
+    .thread T_3;
+    .scope S_001F8F68;
+T_4 ;
+    %delay 10, 0;
+    %load/v 8, v011410E0_0, 1;
+    %inv 8, 1;
+    %set/v v011410E0_0, 8, 1;
+    %jmp T_4;
+    .thread T_4;
+    .scope S_001F8F68;
+T_5 ;
+    %delay 10, 0;
+    %ix/load 0, 1, 0;
+    %assign/v0 v011413F8_0, 0, 1;
+    %delay 60, 0;
+    %ix/load 0, 1, 0;
+    %assign/v0 v011413F8_0, 0, 0;
+    %delay 30, 0;
+    %vpi_call 2 44 "$finish";
+    %end;
+    .thread T_5;
+# The file index is used to find the file name in the following table.
+:file_names 6;
+    "N/A";
+    "<interactive>";
+    "scc_tb.v";
+    "scc_f25_top.v";
+    "scc.v";
+    "instruction_and_data.v";

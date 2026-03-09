@@ -1,0 +1,27 @@
+	ORG #0x00001000;
+R2DATA:
+	FCB #0x12345678;
+
+	ORG #0x00000000;
+START:
+	MOV R2, #0x0; Borrowed from Group 4
+	MOV r1, #0x1;
+	MULS r4,r1,#3;
+	MOV R3, #0x1000;
+
+LOOP:
+	MOV R0, #0x0;
+	MOV R1, #0x04;
+
+ADD_ONE:
+	ADD R0, R0, #0x01;
+	CMP R0, R1;
+	B.ne ADD_ONE;
+	ADD R2, R2, #0x01;
+	STOR R2, R3;
+	CMP R2, #0x02;
+	B.eq DONE;
+	B LOOP;
+
+DONE:
+	HALT;
